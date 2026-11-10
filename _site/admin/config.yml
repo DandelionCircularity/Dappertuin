@@ -3,7 +3,7 @@
 
 backend:
   name: github
-  repo: GITHUB-ACCOUNT/dandelion-circularity   # CHANGE THIS when setting up (SETUP.md, step 3)
+  repo: GITHUB-ACCOUNT/dandelion-circularity   # CHANGE THIS when setting up (SETUP.md, step 2)
   branch: main
   base_url: https://dandelioncircularity.org   # the login runs on our own site (functions/api/)
   auth_endpoint: api/auth
