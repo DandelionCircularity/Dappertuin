@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{title}}</title>
+<meta name="description" content="{{desc}}">
+<meta property="og:title" content="{{title}}">
+<meta property="og:description" content="{{desc}}">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_GB">
+<meta name="theme-color" content="#d9df2a">
+<link rel="icon" href="assets/img/logo-embleem.png" type="image/png">
+<link rel="preload" href="assets/fonts/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/style.css">
+<script src="assets/site.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#inhoud">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html">{{logo}}<span><small>Stichting</small>Dandelion Circularity</span></a>
+    {{lang}}
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="hoofdmenu">Menu</button>
+    <nav class="main-nav" id="hoofdmenu" aria-label="Main menu">
+      <ul>
+        <li><a href="index.html"{{cur:home}}>Home</a></li>
+        <li><a href="waarom-dandelion-circularity.html"{{cur:waarom}}>Why D.C.</a></li>
+        <li class="has-sub">
+          <button class="sub-toggle{{subcur:over}}" type="button" aria-expanded="false" aria-controls="overmenu">About us</button>
+          <ul class="sub-menu" id="overmenu">
+            <li><a href="over-de-stichting.html"{{cur:over}}>Our story</a></li>
+            <li><a href="missie.html"{{cur:missie}}>Mission</a></li>
+            <li><a href="doelstellingen.html"{{cur:doelstellingen}}>Objectives</a></li>
+            <li><a href="visie.html"{{cur:visie}}>Vision</a></li>
+            <li><a href="kernwaarden.html"{{cur:kernwaarden}}>Core values</a></li>
+          </ul>
+        </li>
+        <li class="has-sub">
+          <button class="sub-toggle{{subcur:workshops}}" type="button" aria-expanded="false" aria-controls="workshopmenu">Workshops</button>
+          <ul class="sub-menu" id="workshopmenu">
+            <li><a href="permacultuur.html"{{cur:permacultuur}}>Permaculture – Dapperhuis Garden</a></li>
+            <li><a href="conserveren.html"{{cur:conserveren}}>Preserving, Sharing &amp; Sustainability</a></li>
+          </ul>
+        </li>
+        <li><a href="fotos-en-videos.html"{{cur:fotos}}>Photos and videos</a></li>
+        <li><a href="nieuws-en-agenda.html"{{cur:agenda}}>News &amp; calendar</a></li>
+        <li><a href="wie-zijn-wij.html"{{cur:wie}}>Who we are</a></li>
+        <li><a href="contact.html"{{cur:contact}}>Contact</a></li>
+        <li class="nav-cta"><a class="btn btn-primary btn-small" href="steun-ons.html"{{cur:steun}}>Support us</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="inhoud">
+{{body}}
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <img class="footer-logo" src="assets/img/logo.png" alt="Dandelion Circularity logo" width="480" height="484" loading="lazy">
+        <p class="footer-mission">Restoring the autonomy and wellbeing of people in vulnerable situations and disruption by strengthening the relationship between people and nature, with circularity as the guiding principle.</p>
+        <a class="btn btn-yellow" href="steun-ons.html#doneren">Donate</a>
+      </div>
+      <div>
+        <p class="footer-title">Contact</p>
+        <address>
+          <p>Stichting Dandelion Circularity</p>
+          <p><a href="mailto:dandelioncircularity@gmail.com">dandelioncircularity@gmail.com</a></p>
+          <p><a href="tel:+31616598047">+31 6 16 59 80 47</a></p>
+          <p>Chamber of Commerce (KvK): 42091427</p>
+        </address>
+      </div>
+      <div>
+        <p class="footer-title">Good to know</p>
+        <ul>
+          <li><a href="privacyverklaring.html">Privacy statement</a></li>
+          <li><a href="cookiebeleid.html">Cookie policy</a></li>
+          <li><a href="wie-zijn-wij.html#jaarverslagen">Annual reports</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom"><p>Together we are building recovery, autonomy and connection.</p></div>
+  </div>
+</footer>
+</body>
+</html>

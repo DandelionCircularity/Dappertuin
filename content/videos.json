@@ -1,0 +1,24 @@
+{
+  "videos": [
+    {
+      "titel": "Dapperhuis videopromo",
+      "url": "https://www.youtube.com/watch?v=mrAjrltXot0",
+      "titel_en": "Dapperhuis promo video"
+    },
+    {
+      "titel": "Lekker aan de kook",
+      "url": "https://www.youtube.com/shorts/5T8Cv7rl3Sg",
+      "titel_en": "Cooking up a storm"
+    },
+    {
+      "titel": "Presentatie van de workshop",
+      "url": "https://www.youtube.com/shorts/t3QWukdpbpE",
+      "titel_en": "Presenting the workshop"
+    },
+    {
+      "titel": "De tuin staat er prachtig bij in de zomer",
+      "url": "https://www.youtube.com/shorts/jYvA4imlmTQ",
+      "titel_en": "The garden looks beautiful in summer"
+    }
+  ]
+}

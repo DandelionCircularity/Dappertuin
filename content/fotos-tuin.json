@@ -1,0 +1,67 @@
+{
+  "fotos": [
+    {
+      "foto": "/media/voorkiemen.jpg",
+      "bijschrift": "Het voorkiemen van de zaadjes.",
+      "beschrijving": "Twee mensen staan buiten aan een tafel met eierdozen vol aarde, zaadzakjes en kopjes met zaden.",
+      "bijschrift_en": "Pre-germinating the seeds.",
+      "beschrijving_en": "Two people stand outside at a table with egg boxes full of soil, seed packets and cups of seeds."
+    },
+    {
+      "foto": "/media/zaadjes-de-grond-in.jpg",
+      "bijschrift": "De zaadjes gaan de grond in.",
+      "beschrijving": "Een hand legt zaadjes in donkere aarde in een houten plantenbak.",
+      "bijschrift_en": "The seeds go into the ground.",
+      "beschrijving_en": "A hand places seeds in dark soil in a wooden planter."
+    },
+    {
+      "foto": "/media/bonenzaadjes.jpg",
+      "bijschrift": "Bonenzaadjes.",
+      "beschrijving": "Een open hand met witte bonenzaadjes boven een plantenbak met jonge plantjes.",
+      "bijschrift_en": "Bean seeds.",
+      "beschrijving_en": "An open hand holding white bean seeds above a planter with young seedlings."
+    },
+    {
+      "foto": "/media/rekken-klimplanten.jpg",
+      "bijschrift": "Samen bouwen aan de rekken voor de klimplanten.",
+      "beschrijving": "Vier mensen zetten samen houten rekken voor klimplanten op een plantenbak.",
+      "bijschrift_en": "Building the frames for the climbing plants together.",
+      "beschrijving_en": "Four people put up wooden frames for climbing plants on a planter together."
+    },
+    {
+      "foto": "/media/zaadballetjes.jpg",
+      "bijschrift": "De workshop zaadballetjes maken was een succes.",
+      "beschrijving": "Een bakplaat vol donkere zaadballetjes die liggen te drogen op een houten tafel.",
+      "bijschrift_en": "The seed ball workshop was a success.",
+      "beschrijving_en": "A baking tray full of dark seed balls drying on a wooden table."
+    },
+    {
+      "foto": "/media/groenten-samen.jpg",
+      "bijschrift": "Verschillende soorten groenten die elkaar wederzijds versterken.",
+      "beschrijving": "Een houten plantenbak met knoflook, sla en jonge plantjes tussen een laag afgevallen bladeren.",
+      "bijschrift_en": "Different kinds of vegetables that strengthen one another.",
+      "beschrijving_en": "A wooden planter with garlic, lettuce and young seedlings among a layer of fallen leaves."
+    },
+    {
+      "foto": "/media/komkommers.jpg",
+      "bijschrift": "De komkommers beginnen te groeien.",
+      "beschrijving": "Jonge komkommerplanten in een plantenbak naast een hekje van gaas.",
+      "bijschrift_en": "The cucumbers are starting to grow.",
+      "beschrijving_en": "Young cucumber plants in a planter next to a wire mesh fence."
+    },
+    {
+      "foto": "/media/tuinierweer.jpg",
+      "bijschrift": "Heerlijk tuinierweer.",
+      "beschrijving": "Twee mensen werken in de zon tussen de plantenbakken, met een gieter op de voorgrond.",
+      "bijschrift_en": "Lovely gardening weather.",
+      "beschrijving_en": "Two people work in the sun among the planters, with a watering can in the foreground."
+    },
+    {
+      "foto": "/media/toegangspoort.jpg",
+      "bijschrift": "De toegangspoort tot het paradijsje.",
+      "beschrijving": "Een houten boog begroeid met klimplanten, met een pad van houtsnippers de zonnige tuin in.",
+      "bijschrift_en": "The gateway to our little paradise.",
+      "beschrijving_en": "A wooden arch covered in climbing plants, with a wood-chip path leading into the sunny garden."
+    }
+  ]
+}

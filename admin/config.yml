@@ -1,0 +1,116 @@
+# Settings for the admin section (dandelioncircularity.org/admin).
+# Setup steps: see SETUP.md. How to use it: see HANDLEIDING.md.
+
+backend:
+  name: github
+  repo: GITHUB-ACCOUNT/dandelion-circularity   # CHANGE THIS when setting up (SETUP.md, step 2)
+  branch: main
+  base_url: https://dandelioncircularity.org   # the login runs on our own site (functions/api/)
+  auth_endpoint: api/auth
+  commit_messages:
+    create: "Nieuw in {{collection}}: {{slug}}"
+    update: "Bijgewerkt in {{collection}}: {{slug}}"
+    delete: "Verwijderd uit {{collection}}: {{slug}}"
+    uploadMedia: "Foto toegevoegd: {{path}}"
+    deleteMedia: "Foto verwijderd: {{path}}"
+
+locale: nl
+site_url: https://dandelioncircularity.org
+display_url: https://dandelioncircularity.org
+logo_url: https://dandelioncircularity.org/assets/img/logo.png
+
+media_folder: media
+public_folder: /media
+
+slug:
+  encoding: ascii
+  clean_accents: true
+  sanitize_replacement: "-"
+
+collections:
+  - name: nieuws
+    label: Nieuws
+    label_singular: nieuwsbericht
+    description: "Berichten op de pagina Nieuws & agenda. Het nieuwste bericht staat bovenaan."
+    folder: content/nieuws
+    create: true
+    extension: json
+    format: json
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    identifier_field: titel
+    summary: "{{datum}} · {{titel}}"
+    sortable_fields: [datum, titel]
+    fields:
+      - {label: Titel, name: titel, widget: string}
+      - {label: Datum, name: datum, widget: datetime, format: "YYYY-MM-DD", date_format: "D-M-YYYY", time_format: false}
+      - {label: Tekst, name: tekst, widget: text, hint: "Laat een witregel tussen alinea's. Een webadres (https://...) wordt vanzelf een link."}
+      - {label: Foto, name: foto, widget: image, required: false, choose_url: false, hint: "Een JPG- of PNG-foto. Alleen foto's van mensen die daar toestemming voor gaven."}
+      - {label: "Wat staat er op de foto?", name: beschrijving, widget: string, required: false, hint: "Korte beschrijving voor blinde en slechtziende bezoekers, bijvoorbeeld: Drie deelnemers vullen potjes met compote."}
+      - {label: "Engels: titel", name: titel_en, widget: string, required: false, hint: "Mag leeg blijven. Dan toont de Engelse site de Nederlandse tekst."}
+      - {label: "Engels: tekst", name: tekst_en, widget: text, required: false}
+      - {label: "Engels: wat staat er op de foto?", name: beschrijving_en, widget: string, required: false}
+
+  - name: agenda
+    label: Agenda
+    label_singular: activiteit
+    description: "Komende activiteiten op de pagina Nieuws & agenda. Activiteiten waarvan de datum voorbij is, verdwijnen vanzelf."
+    folder: content/agenda
+    create: true
+    extension: json
+    format: json
+    slug: "{{fields.datum}}-{{slug}}"
+    identifier_field: titel
+    summary: "{{datum}} · {{titel}}"
+    sortable_fields: [datum, titel]
+    fields:
+      - {label: Titel, name: titel, widget: string, hint: "Bijvoorbeeld: Tuindag of Workshop rabarbersiroop"}
+      - {label: Datum, name: datum, widget: datetime, format: "YYYY-MM-DD", date_format: "D-M-YYYY", time_format: false}
+      - {label: Tijd, name: tijd, widget: string, required: false, hint: "Bijvoorbeeld: 10.00–13.00 uur"}
+      - {label: Locatie, name: locatie, widget: string, required: false, default: "Het Dapperhuis, Eerste van Swindenstraat 511, Amsterdam-Oost"}
+      - {label: Toelichting, name: tekst, widget: text, required: false}
+      - {label: "Engels: titel", name: titel_en, widget: string, required: false, hint: "Mag leeg blijven. Dan toont de Engelse site de Nederlandse tekst."}
+      - {label: "Engels: toelichting", name: tekst_en, widget: text, required: false}
+
+  - name: videos
+    label: "Video's"
+    files:
+      - name: videos
+        label: "Video's"
+        file: content/videos.json
+        description: "De video's op de pagina Foto's en video's. Gewone video's staan groot, YouTube Shorts in een rij eronder."
+        fields:
+          - label: "Video's"
+            name: videos
+            widget: list
+            add_to_top: true
+            summary: "{{fields.titel}}"
+            fields:
+              - {label: Titel, name: titel, widget: string}
+              - label: "Link naar de video op YouTube"
+                name: url
+                widget: string
+                hint: "Op YouTube: Delen → Kopiëren. Bijvoorbeeld https://youtu.be/... of https://youtube.com/shorts/..."
+                pattern: ['(youtube\.com|youtu\.be)/', "Dit is geen YouTube-link."]
+              - {label: "Engels: titel", name: titel_en, widget: string, required: false}
+
+  - name: fotos
+    label: "Foto's"
+    files:
+      - name: tuin
+        label: "Fotoalbum: De Dapperhuistuin"
+        file: content/fotos-tuin.json
+        fields: &album
+          - label: "Foto's"
+            name: fotos
+            widget: list
+            summary: "{{fields.bijschrift}}"
+            fields:
+              - {label: Foto, name: foto, widget: image, choose_url: false, hint: "Een JPG- of PNG-foto. Alleen foto's van mensen die daar toestemming voor gaven."}
+              - {label: Bijschrift, name: bijschrift, widget: string, required: false, hint: "Staat onder de foto."}
+              - {label: "Wat staat er op de foto?", name: beschrijving, widget: string, required: false, hint: "Korte beschrijving voor blinde en slechtziende bezoekers."}
+              - {label: "Engels: bijschrift", name: bijschrift_en, widget: string, required: false}
+              - {label: "Engels: wat staat er op de foto?", name: beschrijving_en, widget: string, required: false}
+      - name: conserveren
+        label: "Fotoalbum: Workshop Conserveren, Delen & Duurzaamheid"
+        file: content/fotos-conserveren.json
+        fields: *album

@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{title}}</title>
+<meta name="description" content="{{desc}}">
+<meta property="og:title" content="{{title}}">
+<meta property="og:description" content="{{desc}}">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="nl_NL">
+<meta name="theme-color" content="#d9df2a">
+<link rel="icon" href="assets/img/logo-embleem.png" type="image/png">
+<link rel="preload" href="assets/fonts/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/style.css">
+<script src="assets/site.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#inhoud">Direct naar de inhoud</a>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html">{{logo}}<span><small>Stichting</small>Dandelion Circularity</span></a>
+    {{lang}}
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="hoofdmenu">Menu</button>
+    <nav class="main-nav" id="hoofdmenu" aria-label="Hoofdmenu">
+      <ul>
+        <li><a href="index.html"{{cur:home}}>Home</a></li>
+        <li><a href="waarom-dandelion-circularity.html"{{cur:waarom}}>Waarom D.C.</a></li>
+        <li class="has-sub">
+          <button class="sub-toggle{{subcur:over}}" type="button" aria-expanded="false" aria-controls="overmenu">Over de stichting</button>
+          <ul class="sub-menu" id="overmenu">
+            <li><a href="over-de-stichting.html"{{cur:over}}>Ons verhaal</a></li>
+            <li><a href="missie.html"{{cur:missie}}>Missie</a></li>
+            <li><a href="doelstellingen.html"{{cur:doelstellingen}}>Doelstellingen</a></li>
+            <li><a href="visie.html"{{cur:visie}}>Visie</a></li>
+            <li><a href="kernwaarden.html"{{cur:kernwaarden}}>Kernwaarden</a></li>
+          </ul>
+        </li>
+        <li class="has-sub">
+          <button class="sub-toggle{{subcur:workshops}}" type="button" aria-expanded="false" aria-controls="workshopmenu">Workshops</button>
+          <ul class="sub-menu" id="workshopmenu">
+            <li><a href="permacultuur.html"{{cur:permacultuur}}>Permacultuur – Dapperhuistuin</a></li>
+            <li><a href="conserveren.html"{{cur:conserveren}}>Conserveren, Delen &amp; Duurzaamheid</a></li>
+          </ul>
+        </li>
+        <li><a href="fotos-en-videos.html"{{cur:fotos}}>Foto's en video's</a></li>
+        <li><a href="nieuws-en-agenda.html"{{cur:agenda}}>Nieuws &amp; agenda</a></li>
+        <li><a href="wie-zijn-wij.html"{{cur:wie}}>Wie zijn wij</a></li>
+        <li><a href="contact.html"{{cur:contact}}>Contact</a></li>
+        <li class="nav-cta"><a class="btn btn-primary btn-small" href="steun-ons.html"{{cur:steun}}>Steun ons</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="inhoud">
+{{body}}
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <img class="footer-logo" src="assets/img/logo.png" alt="Logo van Dandelion Circularity" width="480" height="484" loading="lazy">
+        <p class="footer-mission">Het herstellen van autonomie en welzijn van mensen in kwetsbare situaties en ontwrichting, door het versterken van de relatie tussen mens en natuur, waarbij circulariteit als leidend principe wordt gehanteerd.</p>
+        <a class="btn btn-yellow" href="steun-ons.html#doneren">Doneer</a>
+      </div>
+      <div>
+        <p class="footer-title">Contact</p>
+        <address>
+          <p>Stichting Dandelion Circularity</p>
+          <p><a href="mailto:dandelioncircularity@gmail.com">dandelioncircularity@gmail.com</a></p>
+          <p><a href="tel:+31616598047">06.16.59.80.47</a></p>
+          <p>KvK: 42091427</p>
+        </address>
+      </div>
+      <div>
+        <p class="footer-title">Goed om te weten</p>
+        <ul>
+          <li><a href="privacyverklaring.html">Privacyverklaring</a></li>
+          <li><a href="cookiebeleid.html">Cookiebeleid</a></li>
+          <li><a href="wie-zijn-wij.html#jaarverslagen">Jaarverslagen</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom"><p>Samen bouwen we aan herstel, autonomie en verbinding.</p></div>
+  </div>
+</footer>
+</body>
+</html>
